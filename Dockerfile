@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 
 RUN apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get -y upgrade \
-    && DEBIAN_FRONTEND=noninteractive apt-get -y install strongswan iptables uuid-runtime ndppd openssl \
+    && DEBIAN_FRONTEND=noninteractive apt-get -y install strongswan iptables uuid-runtime ndppd openssl kmod \
     && rm -rf /var/lib/apt/lists/*
 
 RUN rm /etc/ipsec.secrets
